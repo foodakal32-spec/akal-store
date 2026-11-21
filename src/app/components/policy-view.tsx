@@ -21,7 +21,7 @@ export default function PolicyView({ policy }: { policy: Policy }) {
               key={p.slug}
               href={`/politiques/${p.slug}`}
               aria-current={active ? "page" : undefined}
-              className={`rounded-full px-5 py-3 text-base font-semibold transition-colors ${font} ${active ? "bg-[#1E504D] text-white" : "text-color-001 hover:bg-surface max-lg:bg-surface"}`}
+              className={`rounded-full px-5 py-3 text-base font-semibold transition-colors ${font} ${active ? "bg-[#344E2F] text-white" : "text-color-001 hover:bg-surface max-lg:bg-surface"}`}
             >
               {p[lang].title}
             </SiteLink>
@@ -31,8 +31,8 @@ export default function PolicyView({ policy }: { policy: Policy }) {
 
       <article className="flex flex-col gap-8 max-w-180">
         <header className="flex flex-col gap-4">
-          <h1 className={`text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] text-color-001 max-lg:text-[2.5rem] max-lg:leading-10.5 ${font}`}>{text.title}</h1>
-          <p className={`text-xl leading-8 text-muted-foreground ${font}`}>{text.intro}</p>
+          <h1 className={`text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] text-color-001 max-lg:text-[1.875rem] max-lg:leading-9 ${font}`}>{text.title}</h1>
+          <p className={`text-base leading-6 text-muted-foreground ${font}`}>{text.intro}</p>
         </header>
         <div className="flex flex-col divide-y divide-black/10 border-y border-black/10">
           {text.sections.map((s) => (

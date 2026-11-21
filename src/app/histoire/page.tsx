@@ -13,7 +13,7 @@ const font = "[font-family:Inter,_'Inter_Placeholder',_sans-serif]";
 
 export default function HistoirePage() {
   return (
-    <main className="w-full min-h-screen relative bg-[#0e2a3a]">
+    <main className="w-full min-h-screen relative theme-beige">
       <GlassBackground />
       {/* Top Hero Banner */}
       <section className="w-full relative z-10 pb-20 max-lg:pb-14">
@@ -23,16 +23,16 @@ export default function HistoirePage() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/90 text-sm font-semibold tracking-wider uppercase mb-5 backdrop-blur-sm">
             <T fr="Notre Histoire" ar="حكايتنا وأصلنا" />
           </span>
-          <h1 className={`text-[3rem] font-bold leading-[3.4rem] tracking-[-1.5px] text-white max-lg:text-[2.2rem] max-lg:leading-10 max-w-220 ${font}`}>
+          <h1 className={`text-[2.25rem] font-bold leading-[2.6rem] tracking-[-1.2px] text-white max-lg:text-[1.625rem] max-lg:leading-8 max-w-220 ${font}`}>
             <T
               fr="AKAL — L'amour de la terre marocaine et du fait-main"
               ar="أكال — حكاية شغف بخيرات الأرض المغربية والصناعة اليدوية"
             />
           </h1>
-          <p className={`mt-6 max-w-180 text-lg leading-relaxed text-white/80 max-lg:text-base ${font}`}>
+          <p className={`mt-4 max-w-180 text-base leading-6 text-white/80 max-lg:text-base ${font}`}>
             <T
-              fr="« AKAL » signifie « la terre » en langue amazighe. Une terre généreuse d'où naissent nos produits naturels d'exception, conçus avec patience et sans aucun compromis."
-              ar="«أكال» تعني «الأرض» باللغة الأمازيغية العريقة. ومن خيرات هذه الأرض الخصبة تبدأ حكايتنا في إحياء المنتجات الطبيعية الأصيلة المصنوعة يدوياً بكل صبر وعناية."
+              fr="« AKAL » signifie « la terre » en amazigh. Des produits naturels faits à la main, avec patience."
+              ar="«أكال» تعني «الأرض» بالأمازيغية. منتجات طبيعية مصنوعة يدوياً بصبر وعناية."
             />
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function HistoirePage() {
         </div>
 
         {/* 3 Key Pillars Banner */}
-        <div className="rounded-3xl bg-[#0E2A3A] text-white p-12 max-lg:p-7 flex flex-col gap-10 items-center text-center">
+        <div className="rounded-3xl bg-[#EAE3D2] text-white p-12 max-lg:p-7 flex flex-col gap-10 items-center text-center">
           <div className="flex flex-col gap-3 max-w-160">
             <h3 className={`text-3xl font-bold text-white max-lg:text-2xl ${font}`}>
               <T fr="La promesse AKAL en trois chiffres" ar="وعد علامة أكال في 3 ركائز أساسية" />

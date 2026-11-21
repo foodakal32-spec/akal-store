@@ -31,7 +31,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
 
   return (
-    <main className="w-full min-h-screen relative bg-[#0e2a3a]">
+    <main className="w-full min-h-screen relative theme-beige">
       <GlassBackground />
       <div className="max-md:hidden relative z-10">
       <section className="w-full">
@@ -63,6 +63,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </section>
       </div>
       <div className="md:hidden">
+        <div className="pb-3"><SiteHeader plainNav /></div>
         <ProductMobile product={product} />
       </div>
 

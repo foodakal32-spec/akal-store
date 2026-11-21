@@ -18,3 +18,92 @@
 [data-cid="n254"]::placeholder{font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;letter-spacing:inherit;text-transform:inherit}
 }
 [data-cid="n319"]::placeholder{color:rgb(90, 95, 102)}
+/* Hero without background image: dark text/controls on the white background */
+.hero-plain h1,
+.hero-plain [data-cid="n57"] { color: rgb(12, 14, 15) !important; text-shadow: none !important; }
+.hero-plain nav :is(p, h4, a, svg) { color: rgb(12, 14, 15) !important; }
+.hero-plain nav button:not([data-menu-toggle]) { background: rgba(0, 0, 0, 0.06) !important; border-color: rgba(0, 0, 0, 0.18) !important; color: rgb(12, 14, 15) !important; }
+.hero-plain nav [data-menu-toggle] > div { background: rgb(12, 14, 15) !important; }
+.hero-plain nav a.bg-background { background: #344E2F !important; }
+.hero-plain nav a.bg-background p { color: #fff !important; }
+
+/* ---- Beige theme (brand "Sandy Beige" #F5F1E8) for page backgrounds ---- */
+.theme-beige { background-color: #F5F1E8 !important; }
+/* photo / glass backdrops that used to sit behind the dark pages */
+.theme-beige .fixed.inset-0.z-0 { display: none !important; }
+/* light text → charcoal, except in the dark footer, glass cards and buttons */
+.theme-beige [class*="text-white"]:not([data-menu-shell][data-open="true"] *):not(footer *):not(.card-glass *):not(.keep-dark *):not(.offer-btn *):not([class*="344E2F"]):not([class*="text-[#d8ff7c]"]) { color: #2B2B2B !important; text-shadow: none !important; }
+.theme-beige [class*="text-[#d8ff7c]"]:not(footer *) { color: #344E2F !important; }
+.theme-beige [class*="bg-white/"]:not(footer *):not(.card-glass *):not(.keep-dark *) { background-color: rgba(52, 78, 47, 0.06) !important; }
+.theme-beige [class*="border-white/"]:not(footer *):not(.card-glass *):not(.keep-dark *) { border-color: rgba(43, 43, 43, 0.15) !important; }
+.theme-beige [class*="drop-shadow"]:not(footer *) { filter: none !important; }
+/* secondary-page header (plain nav): dark icons/text on beige */
+.theme-beige [data-nav-plain] :is(p, h4, a, svg) { color: #2B2B2B !important; }
+.theme-beige [data-nav-plain] [data-menu-toggle] > div { background: #2B2B2B !important; }
+.theme-beige [data-nav-plain] button:not([data-menu-toggle]) { background: rgba(0,0,0,.06) !important; border-color: rgba(0,0,0,.18) !important; color: #2B2B2B !important; }
+.theme-beige [data-nav-plain] a.bg-background { background: #344E2F !important; }
+.theme-beige [data-nav-plain] a.bg-background p { color: #fff !important; }
+.hero-plain [data-menu-shell]::before { display: none !important; }
+
+/* ---- Liquid glass search (Spotlight-style) ---- */
+.search-pop__scrim { background: transparent; }
+.lg-glass {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.05) 45%, rgba(20, 22, 18, 0.28));
+  -webkit-backdrop-filter: blur(30px) saturate(1.9) brightness(0.72);
+  backdrop-filter: blur(30px) saturate(1.9) brightness(0.72);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1.5px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 22px rgba(255, 255, 255, 0.08),
+    0 18px 50px rgba(0, 0, 0, 0.32);
+  animation: lg-pop .5s cubic-bezier(.22, 1, .36, 1) both;
+}
+.lg-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 32%, rgba(255,255,255,0) 68%, rgba(255,255,255,.14) 100%);
+}
+/* Chromium: real edge refraction through the SVG displacement filter */
+@supports not ((-webkit-touch-callout: none) or (background: -webkit-named-image(i)) or (-moz-appearance: none)) {
+  .lg-glass { backdrop-filter: url(#akal-search-liquid) blur(16px) saturate(1.9) brightness(0.72); }
+}
+@keyframes lg-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lg-pop { from { opacity: 0; transform: translateY(-18px) scale(.94); } to { opacity: 1; transform: none; } }
+@keyframes lg-out { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-14px) scale(.95); } }
+@media (prefers-reduced-motion: reduce) { .lg-glass, .search-pop__scrim { animation: none; } }
+
+.lg-glass + .lg-glass { animation-delay: .06s; }
+.search-pop.is-closing .lg-glass { animation: lg-out .3s cubic-bezier(.4, 0, .6, 1) both; animation-delay: 0s; }
+.search-pop.is-closing .lg-glass + .lg-glass { animation-delay: 0s; }
+.search-pop.is-closing { pointer-events: none; }
+
+/* Two product cards per row on phones */
+@media (width < 572px) {
+  .products-2col { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; }
+  .products-2col > div { height: 17rem !important; padding: 1rem 0.5rem 0 !important; border-radius: 20px !important; gap: 0 !important; }
+  .products-2col .card-glass { margin-top: -0.25rem !important; padding: 0.55rem 0.5rem !important; width: 100% !important; }
+  .products-2col .card-glass h3 { font-size: 0.95rem !important; line-height: 1.25rem !important; white-space: normal !important; text-wrap: balance; }
+  .products-2col .offer-btn__btn { min-width: 0 !important; min-height: 40px !important; padding: 0.25em 1em !important; border-radius: 14px !important; }
+  .products-2col .offer-btn__text { font-size: 0.9rem !important; }
+  .products-2col [class*="bottom-"] { bottom: 0.9rem !important; }
+}
+
+/* Open slide-down menu: solid Dark Olive Green with light content */
+html [data-menu-shell][data-open="true"] nav :is(p, h4, a, svg) { color: #fff !important; }
+html [data-menu-shell][data-open="true"] nav [data-menu-toggle] > div { background: #fff !important; }
+html [data-menu-shell][data-menu-shell][data-menu-shell][data-open="true"] nav button:not([data-menu-toggle]):not([data-x]) { background: rgba(255, 255, 255, 0.14) !important; border-color: rgba(255, 255, 255, 0.3) !important; color: #fff !important; }
+
+/* Hairline separating the top navigation from the page content */
+[data-menu-shell]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 1px; background: rgba(43, 43, 43, 0.14); pointer-events: none; }
+[data-menu-shell][data-open="true"]::after { opacity: 0; }
+
+/* Hairline separating the hero from the products section */
+.hero-plain::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(43,43,43,.24);pointer-events:none;z-index:2}

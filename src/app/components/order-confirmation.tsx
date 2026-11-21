@@ -51,7 +51,7 @@ export default function OrderConfirmation() {
         <p className={`text-base text-muted-foreground ${font}`}>
           {t("Nous n'avons pas pu retrouver ce numéro de commande.", "تعذر العثور على هذا الطلب، ربما انتهت صلاحية الجلسة.")}
         </p>
-        <SiteLink href="/" className={`h-[3.9375rem] px-10 flex items-center rounded-[99px] bg-[#1E4A2E] text-base font-semibold text-white ${font}`}>
+        <SiteLink href="/" className={`h-[3.9375rem] px-10 flex items-center rounded-[99px] bg-[#344E2F] text-base font-semibold text-white ${font}`}>
           {t("Retour à l'accueil", "العودة إلى الرئيسية")}
         </SiteLink>
       </div>
@@ -339,7 +339,7 @@ export default function OrderConfirmation() {
       <div className="flex flex-col items-center gap-3 pt-2 pb-6">
         <SiteLink
           href="/produits"
-          className={`h-12 px-8 flex items-center rounded-full bg-[#1E4A2E] text-white text-base font-semibold hover:bg-[#163823] active:scale-95 transition-all shadow-sm ${font}`}
+          className={`h-12 px-8 flex items-center rounded-full bg-[#344E2F] text-white text-base font-semibold hover:bg-[#2a4026] active:scale-95 transition-all shadow-sm ${font}`}
         >
           {t("Découvrir d'autres produits", "تصفح باقي المنتجات الطبيعية")}
         </SiteLink>

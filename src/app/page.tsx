@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <div className="block" data-cid="n1" id="main">
-        <div className="min-h-screen flex relative flex-col justify-start items-center content-center overflow-clip bg-background" data-cid="n2">
+        <div className="min-h-screen flex relative flex-col justify-start items-center content-center overflow-clip theme-beige" data-cid="n2">
           <div className="contents min-w-0" data-cid="n3">
             <HeroSection />
           </div>

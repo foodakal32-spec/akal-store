@@ -34,7 +34,7 @@ export default function CheckoutView() {
     return (
       <div className="py-20 flex flex-col items-center gap-6 text-center">
         <h2 className={`text-3xl font-bold text-color-001 ${font}`}>{t("Votre panier est vide", "سلتك فارغة")}</h2>
-        <SiteLink href="/produits" className={`h-[3.9375rem] px-10 flex items-center rounded-[99px] bg-[#1E4A2E] text-base font-semibold text-white ${font}`}>{t("Découvrir nos produits", "اكتشف منتجاتنا")}</SiteLink>
+        <SiteLink href="/produits" className={`h-[3.9375rem] px-10 flex items-center rounded-[99px] bg-[#344E2F] text-base font-semibold text-white ${font}`}>{t("Découvrir nos produits", "اكتشف منتجاتنا")}</SiteLink>
       </div>
     );
   }

@@ -14,7 +14,7 @@ const font = "[font-family:Inter,_'Inter_Placeholder',_sans-serif]";
 
 export default function PanierPage() {
   return (
-    <main className="w-full min-h-screen relative bg-[#0e2a3a]">
+    <main className="w-full min-h-screen relative theme-beige">
       <GlassBackground />
       <section className="w-full relative z-10">
         <SiteHeader plainNav />

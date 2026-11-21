@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function ConfirmationPage() {
   return (
-    <main className="w-full min-h-screen bg-background">
-      <section className="w-full bg-[#1E504D]">
+    <main className="w-full min-h-screen theme-beige">
+      <section className="w-full">
         <SiteHeader plainNav />
       </section>
       <section className="w-full bg-[#F6F5F1] px-10 py-14 max-lg:px-5 max-lg:py-10">

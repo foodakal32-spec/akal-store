@@ -13,7 +13,7 @@ export default function RealOrganicBeansSection() {
       <div className="h-full block absolute top-0 inset-x-0 min-w-0 shrink-0 pointer-events-none" style={{ backgroundImage: "linear-gradient(160deg, var(--clr-6) 0%, var(--clr-7) 35%, var(--clr-0) 60%)" }} data-cid="n229" />
       <div className="w-full max-w-337.5 flex relative z-1 flex-col justify-start items-start content-start shrink-0 gap-7 max-lg:gap-6" data-cid="n230">
         <div className="w-full max-w-155 flex relative flex-col justify-start shrink-0 whitespace-pre-wrap [word-break:break-word] [overflow-wrap:break-word]" data-cid="n231">
-          <h2 className="block text-background [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.5rem] font-semibold leading-11 tracking-[-0.8px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[2rem] max-lg:leading-[2.1875rem] max-lg:tracking-[-0.64px] 2xl:text-5xl 2xl:leading-[3.3125rem] 2xl:tracking-[-0.96px]" data-cid="n232" data-component="heading" dir="auto">
+          <h2 className="block text-background [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.125rem] font-semibold leading-[2.4rem] tracking-[-0.8px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[1.625rem] max-lg:leading-[1.9rem] max-lg:tracking-[-0.64px] 2xl:text-5xl 2xl:leading-[3.3125rem] 2xl:tracking-[-0.96px]" data-cid="n232" data-component="heading" dir="auto">
             <T fr={"Des produits naturels."} ar={"منتجات طبيعية،"} />
             <br className="inline" data-cid="n233" />
             <T fr={"Un vrai savoir-faire marocain."} ar={"وحِرفية مغربية أصيلة."} />

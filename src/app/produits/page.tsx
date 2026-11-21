@@ -1,11 +1,9 @@
 import { T } from "../components/i18n";
 import SiteLink from "../components/site-link";
 import SiteHeader from "../components/site-header";
-import ProductCard from "../components/product-card";
+import ProductTile from "../components/product-tile";
 import LogoCloudSection from "../sections/logo-cloud-section";
-import { ProductCard_cids } from "../_cids";
-import { ProductCard_styles } from "../_styles";
-import { products } from "../content";
+import { productDetails } from "../product-data";
 
 export const metadata = {
   title: "Tous les produits — AKAL أكال",
@@ -16,7 +14,7 @@ const font = "[font-family:Inter,_'Inter_Placeholder',_sans-serif]";
 
 export default function ProduitsPage() {
   return (
-    <main className="w-full min-h-screen relative bg-[#0e2a3a]">
+    <main className="w-full min-h-screen relative theme-beige">
       {/* Fixed Background Image with Liquid Glass Layer across the entire viewport */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <img
@@ -32,13 +30,13 @@ export default function ProduitsPage() {
         <SiteHeader plainNav />
 
         <div className="w-full max-w-337.5 mx-auto px-10 pt-16 pb-14 max-lg:px-5 max-lg:pt-10 max-lg:pb-10">
-          <h1 className={`text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] text-white drop-shadow-md max-lg:text-[2.5rem] max-lg:leading-10.5 ${font}`}><T fr="Tous nos produits" ar="جميع منتجاتنا" /></h1>
-          <p className={`mt-5 max-w-150 text-lg leading-7 text-white drop-shadow max-lg:text-base ${font}`}><T fr="Produits naturels faits maison, 100% à la main, sans conservateurs, pour une vie plus saine." ar="منتجات طبيعية منزلية الصنع، مصنوعة يدوياً 100%، بدون مواد حافظة، لحياة أكثر صحة." /></p>
+          <h1 className={`text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] text-white drop-shadow-md max-lg:text-[1.875rem] max-lg:leading-9 ${font}`}><T fr="Tous nos produits" ar="جميع منتجاتنا" /></h1>
+          <p className={`mt-3 max-w-150 text-base leading-6 text-white drop-shadow max-lg:text-base ${font}`}><T fr="Produits naturels faits maison, sans conservateurs." ar="منتجات طبيعية منزلية الصنع، بدون مواد حافظة." /></p>
         </div>
 
-        <div id="products" className="w-full max-w-337.5 mx-auto px-10 grid grid-cols-3 gap-8 max-lg:px-5 max-lg:grid-cols-2 max-md:grid-cols-1 max-lg:gap-5">
-          {products.map((d, i) => (
-            <ProductCard key={i} d={d} cids={ProductCard_cids[i % ProductCard_cids.length]} styles={ProductCard_styles[i % ProductCard_styles.length]} />
+        <div id="products" className="w-full max-w-337.5 mx-auto px-10 grid grid-cols-4 gap-6 max-lg:px-5 max-lg:grid-cols-3 max-md:grid-cols-2 max-md:gap-3">
+          {productDetails.map((p) => (
+            <ProductTile key={p.slug} product={p} />
           ))}
         </div>
       </section>

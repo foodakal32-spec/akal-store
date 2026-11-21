@@ -10,7 +10,7 @@ const Tile_data: TileData[] = [
 /** Machi section. */
 export default function MachiSection({ tileData = Tile_data } = {}) {
   return (
-    <div className="text-center w-full flex relative py-25 px-10 flex-col justify-start items-center content-center shrink-0 overflow-clip bg-[#0E2A3A] max-lg:py-20 max-lg:px-5 2xl:py-30 2xl:px-15" data-cid="n173" id="our-story">
+    <div className="text-center w-full flex relative py-25 px-10 flex-col justify-start items-center content-center shrink-0 overflow-clip max-lg:py-20 max-lg:px-5 2xl:py-30 2xl:px-15" data-cid="n173" id="our-story">
       <div className="w-full max-w-337.5 flex relative flex-col justify-start items-center content-start shrink-0 gap-14 max-lg:gap-10 2xl:items-center 2xl:content-center 2xl:gap-24 2xl:[flex-direction:initial]" data-cid="n174">
         <div className="contents min-w-0" data-cid="n175">
           <div className="w-300 h-140 block relative rounded-[28px] shrink-0 overflow-clip max-md:w-[20.9375rem] max-lg:h-105 max-lg:rounded-3xl md:max-lg:w-182 2xl:w-[39.1875rem] 2xl:h-190 2xl:flex-1" data-cid="n176">
@@ -39,19 +39,16 @@ export default function MachiSection({ tileData = Tile_data } = {}) {
               </p>
             </div>
             <div className="w-full flex relative flex-col justify-start shrink-0 whitespace-pre-wrap [word-break:break-word] [overflow-wrap:break-word] max-md:w-[20.9375rem] md:max-lg:w-182 2xl:w-[39.1875rem]" data-cid="n189">
-              <h1 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[2.5rem] max-lg:leading-10.5 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n190" data-component="heading" dir="auto">
+              <h1 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[1.875rem] max-lg:leading-9 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n190" data-component="heading" dir="auto">
                 <T fr={"Fait main,"} ar={"مصنوع يدوياً،"} />
               </h1>
-              <h2 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[2.5rem] max-lg:leading-10.5 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n191" data-component="heading" dir="auto">
+              <h2 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[1.875rem] max-lg:leading-9 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n191" data-component="heading" dir="auto">
                 <T fr={"avec le plus grand soin"} ar={"بكل عناية"} />
               </h2>
             </div>
             <div className="mx-auto w-full max-w-130 flex relative flex-col justify-start shrink-0 whitespace-pre-wrap [word-break:break-word] [overflow-wrap:break-word]" data-cid="n192">
-              <p className="block text-white/75 [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-lg leading-[1.6875rem] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] 2xl:text-xl 2xl:leading-7.5" data-cid="n193" dir="auto">
-                <T fr={"AKAL est une marque marocaine de produits naturels, faits maison et 100% à la main, sans conservateurs."} ar={"أكال علامة مغربية لمنتجات طبيعية، منزلية الصنع ومصنوعة يدوياً 100%، بدون مواد حافظة."} />
-              </p>
-              <p className="block mt-5 text-white/75 [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-lg leading-[1.6875rem] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] 2xl:text-xl 2xl:leading-7.5" data-cid="n194" dir="auto">
-                <T fr={"Sucre et sirop de dattes, mastic, eau de rose et bien d’autres produits, pour une vie plus saine."} ar={"سكر التمر ودبس التمر، المسكة، ماء الورد ومنتجات أخرى كثيرة، لحياة أكثر صحة."} />
+              <p className="block text-white/75 [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-base leading-[1.6875rem] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] 2xl:text-xl 2xl:leading-7.5" data-cid="n193" dir="auto">
+                <T fr={"Produits naturels, faits maison et 100% à la main, sans conservateurs."} ar={"منتجات طبيعية منزلية الصنع، مصنوعة يدوياً 100% وبدون مواد حافظة."} />
               </p>
             </div>
           </div>

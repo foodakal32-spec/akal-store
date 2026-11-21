@@ -1,5 +1,6 @@
 "use client";
 
+import SearchButton from "./search-button";
 import SiteLink from "./site-link";
 import { WHATSAPP_URL } from "../product-data";
 import { T } from "./i18n";
@@ -29,16 +30,12 @@ export default function SiteHeader({ plainNav = true }: { plainNav?: boolean } =
         </svg>
         <MobileMenuController />
         <nav className="h-full max-w-337.5 mx-auto flex relative px-8 justify-between items-center content-center overflow-clip max-lg:pb-8 max-lg:px-5 max-lg:flex-col max-lg:justify-start max-lg:items-start max-lg:content-start max-lg:gap-7 2xl:px-15 max-md:pt-3" data-component="nav">
-          <div className="w-[89.3px] h-9 flex relative justify-between items-center content-center shrink-0 max-md:w-full max-lg:h-18 md:max-lg:w-full">
-            <div className="w-[89.3px] flex relative flex-col justify-start shrink-0 whitespace-pre text-nowrap">
-              <p className={`block text-background ${font} text-3xl font-bold leading-9`} dir="auto">
-                <SiteLink className="inline cursor-pointer hover:opacity-85 transition-opacity" href="/">
-                  <T fr="AKAL" ar="أكال" />
-                </SiteLink>
-              </p>
+          <div dir="ltr" className="w-[89.3px] h-9 flex relative justify-between items-center content-center shrink-0 max-md:w-full max-lg:h-18 md:max-lg:w-full">
+<div className="hidden max-lg:flex items-center gap-1"><SearchButton /><NavCartLink className="flex" /></div>
+            <div className="w-[89.3px] flex relative max-lg:static flex-col justify-start shrink-0 whitespace-pre text-nowrap">
+<SiteLink className="block cursor-pointer max-lg:absolute max-lg:left-1/2 max-lg:top-1/2 max-lg:-translate-x-1/2 max-lg:-translate-y-1/2" href="/" aria-label="AKAL"><img src="/assets/logo.png.png" alt="AKAL أكال" width="52" height="52" className="h-13 w-13 rounded-full object-cover shadow-md" /></SiteLink>
             </div>
             <div className="flex items-center gap-2">
-              <NavCartLink className="hidden max-lg:flex" />
               <div data-menu-toggle role="button" tabIndex={0} aria-expanded="false" aria-label="Ouvrir le menu" className="hidden max-lg:w-8 max-lg:h-8 max-lg:block max-lg:relative max-lg:shrink-0 max-lg:cursor-pointer">
                 <div className="hidden max-lg:w-6 max-lg:h-0.5 max-lg:block max-lg:absolute max-lg:top-[0.6875rem] max-lg:left-1 max-lg:rounded-[10px] max-lg:shrink-0 max-lg:bg-background" />
                 <div className="hidden max-lg:w-6 max-lg:h-0.5 max-lg:block max-lg:absolute max-lg:top-[1.1875rem] max-lg:left-1 max-lg:rounded-[10px] max-lg:shrink-0 max-lg:bg-background" />

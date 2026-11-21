@@ -55,11 +55,11 @@ export default function ProductInfo({ product }: { product: ProductDetail }) {
       <div className="flex items-start justify-between gap-4">
         <div className="flex flex-col gap-1.5">
           <p className={`text-base font-semibold text-[#8A6A1F] ${font}`}>{p.category}</p>
-          <h1 className={`text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] text-color-001 max-lg:text-[2.5rem] max-lg:leading-10.5 ${font}`}>{p.name}</h1>
+          <h1 className={`text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] text-color-001 max-lg:text-[1.875rem] max-lg:leading-9 ${font}`}>{p.name}</h1>
           {p.nameAr && <p dir="rtl" lang="ar" className={`text-xl font-semibold text-muted-foreground ${font}`}>{p.nameAr}</p>}
         </div>
         <div className="flex items-center gap-3 shrink-0">
-          {p.badge && <span className={`px-3 py-1 rounded-lg bg-[#1E4A2E] text-sm font-bold text-white ${font}`}>{p.badge}</span>}
+          {p.badge && <span className={`px-3 py-1 rounded-lg bg-[#344E2F] text-sm font-bold text-white ${font}`}>{p.badge}</span>}
           <button type="button" onClick={share} aria-label={t("Partager", "مشاركة")} title={shared ? t("Lien copié", "تم نسخ الرابط") : t("Partager", "مشاركة")} className="w-[3.25rem] h-[3.25rem] flex items-center justify-center rounded-full border border-black/10 text-color-001 hover:bg-surface transition-colors">
             {shared ? (
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
@@ -73,7 +73,7 @@ export default function ProductInfo({ product }: { product: ProductDetail }) {
       <p className={`text-xl leading-8 text-[#1E504D] ${font}`}>{p.short}</p>
 
       {size && (
-        <p className={`text-[3.25rem] font-bold leading-none text-[#1E4A2E] max-lg:text-[2.5rem] ${font}`} aria-live="polite">{formatPrice(size.price, lang)}</p>
+        <p className={`text-[2.5rem] font-bold leading-none text-[#1E4A2E] max-lg:text-[1.875rem] ${font}`} aria-live="polite">{formatPrice(size.price, lang)}</p>
       )}
 
       <p className={`text-base leading-[1.625rem] text-muted-foreground ${font}`}>{p.description}</p>
@@ -89,7 +89,7 @@ export default function ProductInfo({ product }: { product: ProductDetail }) {
                 role="radio"
                 aria-checked={i === sizeIndex}
                 onClick={() => setSizeIndex(i)}
-                className={`h-[3.75rem] px-7 rounded-full border text-lg transition-colors ${font} ${i === sizeIndex ? "bg-[#1E4A2E] border-[#1E4A2E] text-white" : "bg-white border-black/10 text-color-001 hover:border-black/30"}`}
+                className={`h-[3.75rem] px-7 rounded-full border text-lg transition-colors ${font} ${i === sizeIndex ? "bg-[#344E2F] border-[#344E2F] text-white" : "bg-white border-black/10 text-color-001 hover:border-black/30"}`}
               >
                 {sizeLabel(s.label, lang)}
               </button>
@@ -105,7 +105,7 @@ export default function ProductInfo({ product }: { product: ProductDetail }) {
             <span className={`w-10 text-center text-xl font-semibold text-color-001 ${font}`} aria-live="polite">{qty}</span>
             <button type="button" onClick={() => setQty((q) => Math.min(99, q + 1))} aria-label={t("Augmenter la quantité", "زيادة الكمية")} className="w-12 h-12 flex items-center justify-center rounded-full text-2xl text-color-001">+</button>
           </div>
-          <button type="button" onClick={addToCart} disabled={!size} className={`h-[4.4rem] flex-1 flex items-center justify-center gap-3 rounded-full bg-[#1E4A2E] text-lg font-semibold text-white hover:bg-[#173a24] transition-colors disabled:opacity-50 ${font}`}>
+          <button type="button" onClick={addToCart} disabled={!size} className={`h-[4.4rem] flex-1 flex items-center justify-center gap-3 rounded-full bg-[#344E2F] text-lg font-semibold text-white hover:bg-[#2a4026] transition-colors disabled:opacity-50 ${font}`}>
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>
             {added ? t("Ajouté au panier ✓", "تمت الإضافة ✓") : t("Ajouter au panier", "أضف إلى السلة")}
           </button>

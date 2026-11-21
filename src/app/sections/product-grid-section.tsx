@@ -1,20 +1,21 @@
 import { T } from "../components/i18n";
 import SiteLink from "../components/site-link";
-import ProductCard from "../components/product-card";
+import ProductTile from "../components/product-tile";
+import { productDetails } from "../product-data";
 import { ProductCard_cids } from "../_cids";
 import { ProductCard_styles } from "../_styles";
 import { products as productsContent } from "../content";
 /** Product Grid section. */
-export default function ProductGridSection({ products = productsContent.slice(0, 3), showButton = false }: { products?: typeof productsContent; showButton?: boolean } = {}) {
+export default function ProductGridSection({ products = productsContent.slice(0, 4), showButton = false }: { products?: typeof productsContent; showButton?: boolean } = {}) {
   return (
-    <div className="w-full flex relative py-25 px-10 flex-col justify-start items-center content-center shrink-0 overflow-clip bg-[#1E504D] max-lg:py-20 max-lg:px-5 2xl:py-30 2xl:px-15" data-cid="n77" id="products">
+    <div className="w-full flex relative py-25 px-10 flex-col justify-start items-center content-center shrink-0 overflow-clip max-lg:py-20 max-lg:px-5 2xl:py-30 2xl:px-15" data-cid="n77" id="products">
       <div className="w-full max-w-337.5 flex relative flex-col justify-start items-start content-start shrink-0 gap-12 max-lg:gap-8" data-cid="n78">
         <div className="w-full flex relative flex-wrap justify-between items-end content-end shrink-0 max-lg:flex-col max-lg:justify-start max-lg:items-start max-lg:content-start max-lg:gap-6" data-cid="n79">
           <div className="w-[425.5px] flex relative flex-col justify-start shrink-0 whitespace-pre text-nowrap max-md:w-full max-lg:whitespace-pre-wrap max-lg:[word-break:break-word] max-lg:[overflow-wrap:break-word] max-lg:[text-wrap:initial] md:max-lg:w-full 2xl:w-[523.7px]" data-cid="n80">
-            <h1 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[2.5rem] max-lg:leading-10.5 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n81" data-component="heading" dir="auto">
+            <h1 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[1.875rem] max-lg:leading-9 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n81" data-component="heading" dir="auto">
               <T fr={"Nos produits"} ar={"منتجاتنا"} />
             </h1>
-            <h2 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[3.25rem] font-bold leading-[3.4375rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[2.5rem] max-lg:leading-10.5 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n82" data-component="heading" dir="auto">
+            <h2 className="block text-white [font-family:Inter,_'Inter_Placeholder',_sans-serif] text-[2.5rem] font-bold leading-[2.75rem] tracking-[-1.56px] [font-feature-settings:'blwf',_'cv03',_'cv04',_'cv09',_'cv11'] max-lg:text-[1.875rem] max-lg:leading-9 max-lg:tracking-[-1.2px] 2xl:text-[4rem] 2xl:leading-[4.1875rem] 2xl:tracking-[-1.92px]" data-cid="n82" data-component="heading" dir="auto">
               <T fr={"faits main"} ar={"المصنوعة يدوياً"} />
             </h2>
           </div>
@@ -39,8 +40,8 @@ export default function ProductGridSection({ products = productsContent.slice(0,
             </div>
           </div>}
         </div>
-        <div className="w-full grid relative justify-center shrink-0 gap-8 [grid-auto-rows:minmax(0px,_1fr)] grid-cols-3 max-md:w-full max-lg:flex max-lg:flex-col max-lg:justify-start max-lg:items-start max-lg:content-start max-lg:gap-5 max-lg:grid-cols-[repeat(2,_minmax(50px,_1fr))] max-lg:grid-rows-1 md:max-lg:w-full 2xl:w-337.5" data-cid="n92">
-          {products.map((d, i) => <ProductCard key={i} d={d} cids={ProductCard_cids[i % ProductCard_cids.length]} styles={ProductCard_styles[i % ProductCard_styles.length]} />)}
+        <div className="w-full grid grid-cols-4 gap-6 max-lg:grid-cols-3 max-md:grid-cols-2 max-md:gap-3" data-cid="n92">
+          {products.map((d) => { const detail = productDetails.find((x) => x.slug === d.slug); return detail ? <ProductTile key={d.slug} product={detail} /> : null; })}
         </div>
       </div>
     </div>

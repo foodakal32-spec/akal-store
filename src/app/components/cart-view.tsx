@@ -31,7 +31,7 @@ export default function CartView() {
           🛒
         </div>
         <div className="flex flex-col gap-3">
-          <h2 className={`text-4xl max-lg:text-3xl font-extrabold text-white drop-shadow-md tracking-tight ${font}`}>
+          <h2 className={`text-3xl max-lg:text-2xl font-extrabold text-white drop-shadow-md tracking-tight ${font}`}>
             {t("Votre panier est vide", "سلتك فارغة")}
           </h2>
           <p className={`text-lg max-lg:text-base font-medium text-white/80 leading-relaxed drop-shadow ${font}`}>
@@ -40,7 +40,7 @@ export default function CartView() {
         </div>
         <SiteLink
           href="/produits"
-          className={`mt-2 h-14 px-10 flex items-center justify-center rounded-[99px] bg-[#1E504D] hover:bg-[#20516f] active:scale-95 text-base font-bold text-white shadow-xl transition-all border border-white/15 ${font}`}
+          className={`mt-2 h-14 px-10 flex items-center justify-center rounded-[99px] bg-[#344E2F] hover:bg-[#2a4026] active:scale-95 text-base font-bold text-white shadow-xl transition-all border border-white/15 ${font}`}
         >
           {t("Découvrir nos produits", "اكتشف منتجاتنا")}
         </SiteLink>
@@ -51,7 +51,7 @@ export default function CartView() {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h1 className={`text-[2.75rem] font-bold leading-tight tracking-[-1.5px] text-white drop-shadow-md max-lg:text-3xl ${font}`}>
+        <h1 className={`text-[2.25rem] font-bold leading-tight tracking-[-1.2px] text-white drop-shadow-md max-lg:text-[1.625rem] ${font}`}>
           {t("Votre panier", "سلتك")} <span className="text-xl font-normal text-white/75">({count})</span>
         </h1>
       </div>

@@ -823,7 +823,7 @@ html, body { overflow-x: clip; }
   }
   [data-menu-shell][data-open="true"] {
     height: auto;
-    background-color: #1e504d;
+    background-color: #344E2F;
     border-radius: 0 0 1.5rem 1.5rem;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
     /* opening transition */
@@ -874,7 +874,7 @@ html[lang="ar"] body *:not(text) {
    Used by components/offer-button.tsx.
    --------------------------------------------------------------------------- */
 .offer-btn {
-  --btn-color: #d8ff7c;
+  --btn-color: #344E2F;
   --timing-function: cubic-bezier(0, 0, 0, 2.5);
   --duration: 250ms;
   position: relative;
@@ -919,8 +919,8 @@ html[lang="ar"] body *:not(text) {
   font-weight: 700;
   line-height: 1.4;
   padding: 0.15em 0;
-  color: #1a220b;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   transition: transform var(--duration) var(--timing-function), filter var(--duration) var(--timing-function);
 }
 
@@ -929,7 +929,7 @@ html[lang="ar"] body *:not(text) {
 .offer-btn__btn:focus-visible { transform: scale(1.05); filter: drop-shadow(0 16px 16px #0002); }
 .offer-btn__btn:hover .offer-btn__text,
 .offer-btn__btn:focus-visible .offer-btn__text {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.15);
   transform: scale(1.03);
 }
 
@@ -941,6 +941,7 @@ html[lang="ar"] body *:not(text) {
 .offer-btn--added {
   --btn-color: #bdf2cb !important;
 }
+.offer-btn--added .offer-btn__text { color: #1a220b; text-shadow: none; }
 .offer-btn--added .offer-btn__btn {
   background: linear-gradient(#ffffff60, #00000006), #a7eeb7 !important;
   box-shadow:
@@ -982,20 +983,20 @@ html[lang="ar"] body *:not(text) {
     min-height: 64px;
     width: 16rem !important;
     border-radius: 16px !important;
-    background: linear-gradient(#fff2, #0001), #d8ff7c !important;
+    background: linear-gradient(#fff2, #0001), #344E2F !important;
     box-shadow: 1px 1px 2px -1px #fff inset, 0 2px 1px #00000010, 0 4px 2px #00000010, 0 8px 4px #00000010, 0 16px 8px #00000010, 0 32px 16px #00000010 !important;
-    color: #5550 !important;
+    color: #fff !important;
     transition: transform 250ms cubic-bezier(0, 0, 0, 2.5), filter 250ms cubic-bezier(0, 0, 0, 2.5);
   }
   .hero-cta:hover, .hero-cta:focus-visible { transform: scale(1.05); filter: drop-shadow(0 16px 16px #0002); }
   .hero-cta:active { transform: scale(0.95); filter: drop-shadow(0 10px 4px #0002); }
   .hero-cta p, .hero-cta span {
-    color: #5550 !important;
-    background-image: linear-gradient(#444, #000a);
+    color: #fff !important;
+    background-image: none;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 1px 0 #fff6) drop-shadow(0 -1px 0 #0006);
+    -webkit-text-fill-color: #fff;
+    filter: none;
   }
 }
 
@@ -1071,10 +1072,10 @@ html[lang="ar"] body *:not(text) {
       box-shadow 0.2s ease 0.15s;
   }
   [data-menu-shell][data-open="true"] {
-    background-color: rgba(30, 80, 90, 0.26);
-    -webkit-backdrop-filter: blur(44px) saturate(1.5) brightness(1.08);
-    backdrop-filter: blur(44px) saturate(1.5) brightness(1.08);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.22), 0 18px 44px rgba(0, 0, 0, 0.16);
+    background-color: #344E2F;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
     transition:
       height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
       background-color 0.2s ease,
@@ -1123,8 +1124,8 @@ html[lang="ar"] body *:not(text) {
 .akal-btn {
   display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
   border: none; border-radius: 16px; padding: 0 1.25em;
-  background: linear-gradient(#fff2, #0001), #d8ff7c;
-  color: #1a220b; font-weight: 700; text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background: linear-gradient(#fff2, #0001), #344E2F;
+  color: #fff; font-weight: 700; text-shadow: 0 1px 1px rgba(0,0,0,.25);
   box-shadow: 1px 1px 2px -1px #fff inset, 0 2px 1px #00000010, 0 4px 2px #00000010, 0 8px 4px #00000010, 0 12px 8px #00000010;
   transition: transform 250ms cubic-bezier(0, 0, 0, 2.5), filter 250ms cubic-bezier(0, 0, 0, 2.5);
 }

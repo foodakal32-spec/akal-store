@@ -13,7 +13,7 @@ const font = "[font-family:Inter,_'Inter_Placeholder',_sans-serif]";
 
 export default function ValeursPage() {
   return (
-    <main className="w-full min-h-screen relative bg-[#0e2a3a]">
+    <main className="w-full min-h-screen relative theme-beige">
       <GlassBackground />
       {/* Top Hero Banner */}
       <section className="w-full relative z-10 pb-20 max-lg:pb-14">
@@ -23,16 +23,16 @@ export default function ValeursPage() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/90 text-sm font-semibold tracking-wider uppercase mb-5 backdrop-blur-sm">
             <T fr="Nos Valeurs" ar="قيمنا ومبادئنا" />
           </span>
-          <h1 className={`text-[3rem] font-bold leading-[3.4rem] tracking-[-1.5px] text-white max-lg:text-[2.2rem] max-lg:leading-10 max-w-220 ${font}`}>
+          <h1 className={`text-[2.25rem] font-bold leading-[2.6rem] tracking-[-1.2px] text-white max-lg:text-[1.625rem] max-lg:leading-8 max-w-220 ${font}`}>
             <T
               fr="Ce qui nous guide : l'exigence du vrai et de l'authentique"
               ar="ما يوجهنا يومياً: الإصرار على النقاء والأصالة الحقيقية"
             />
           </h1>
-          <p className={`mt-6 max-w-180 text-lg leading-relaxed text-white/80 max-lg:text-base ${font}`}>
+          <p className={`mt-4 max-w-180 text-base leading-6 text-white/80 max-lg:text-base ${font}`}>
             <T
-              fr="Chez AKAL, nous croyons qu'une vie saine commence par des produits vrais, préparés dans le respect de l'humain et de la nature."
-              ar="في «أكال»، نؤمن بأن الحياة الصحية تبدأ من المنتجات النقية المحضرة باحترام للإنسان وخيرات الطبيعة."
+              fr="Une vie saine commence par des produits vrais."
+              ar="الحياة الصحية تبدأ من منتجات نقية وأصيلة."
             />
           </p>
         </div>

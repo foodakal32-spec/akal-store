@@ -133,7 +133,7 @@ const TestimonialCard: React.FC<CardProps> = ({
       onClick={() => handleMove(position)}
       className={cn(
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-7 transition-all duration-500 ease-in-out select-none",
-        isCenter ? "z-10" : "z-0 hover:border-[#1E504D]/40"
+        isCenter ? "z-10" : "z-0 hover:border-[#344E2F]/40"
       )}
       style={{
         width: cardSize,
@@ -241,7 +241,7 @@ export default function StaggerTestimonials() {
   }, []);
 
   return (
-    <section className="w-full bg-[#0E2A3A] py-20 max-lg:py-14 overflow-hidden">
+    <section className="w-full py-20 max-lg:py-14 overflow-hidden">
       {/* Section header */}
       <div className="flex flex-col items-center text-center gap-4 mb-12 px-5">
         <span
@@ -253,7 +253,7 @@ export default function StaggerTestimonials() {
         </span>
 
         <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.2]"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-[1.2]"
           style={{ fontFamily: "var(--font-tajawal), 'Tajawal', sans-serif" }}
         >
           {t("Ils ont essayé, ils ont adoré", "جربوا وأحبوا — شهادات حقيقية")}
@@ -314,14 +314,14 @@ export default function StaggerTestimonials() {
         <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-3 z-20">
           <button
             onClick={() => handleMove(-1)}
-            className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white text-color-001 hover:bg-[#1E504D] hover:text-white hover:border-[#1E504D] transition-all rounded-full shadow-md hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E504D] cursor-pointer"
+            className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white text-color-001 hover:bg-[#344E2F] hover:text-white hover:border-[#344E2F] transition-all rounded-full shadow-md hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E504D] cursor-pointer"
             aria-label={t("Précédent", "السابق")}
           >
             <ChevronLeft className="w-5 h-5 rtl:rotate-180" />
           </button>
           <button
             onClick={() => handleMove(1)}
-            className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white text-color-001 hover:bg-[#1E504D] hover:text-white hover:border-[#1E504D] transition-all rounded-full shadow-md hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E504D] cursor-pointer"
+            className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white text-color-001 hover:bg-[#344E2F] hover:text-white hover:border-[#344E2F] transition-all rounded-full shadow-md hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E504D] cursor-pointer"
             aria-label={t("Suivant", "التالي")}
           >
             <ChevronRight className="w-5 h-5 rtl:rotate-180" />
